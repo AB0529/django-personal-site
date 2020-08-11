@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .banner img {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+        filter: blur(10px);
+        transform: scale(1.1);
+    }
+
+    .banner-txt {
+        position: absolute;
+        left: 0;
+        text-align: center;
+        top: 40%;
+        width: 100%;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .banner-border::after {
+        content: "";
+        position: absolute;
+        border-top: 10px solid rgb(255, 0, 0, 0.5);
+        left: 40%;
+        bottom: 0;
+        width: 20%;
+        height: 0px;
+    }
+</style>
+
+<!-- Banner -->
+<div class="banner">
+    <img class="banner" src="https://wallpaperaccess.com/full/655277.png" />
+    <!-- Banner Text -->
+    <div class="banner-txt">
+        <h1>ANISH B.</h1>
+        <h1 class="banner-border"></h1>
+    </div>
+</div>
+{% endblock %}

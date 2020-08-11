@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% block title %} <title> Anish B. </title> {% endblock %}
+</head>
+
+<body>
+  <style>
+    nav {
+      padding: 1vh;
+      margin: 1vh;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .navbar-fixed {
+      position: absolute;
+      z-index: (99999999999);
+    }
+  </style>
+
+  <div class="navbar-fixed">
+    <!-- Navbar -->
+    <nav class="transparent z-depth-0">
+      <div class="nav-wrapper">
+        <!-- Logo -->
+        <a class="brand-logo" href="{% url 'home' %}"><strong>Anish B.</strong></a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons">menu</i>
+        </a>
+
+        <ul class="right hide-on-med-and-down ">
+          <!-- Nav Items -->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="{% url 'home' %}">API</a></li>
+          </ul>
+      </div>
+    </nav>
+  </div>
+      <!-- Mobile Navbar -->
+      <style>
+        .sidenav {
+          background-image: url(https://wallpaperaccess.com/full/655277.png);
+          background-position: center;
+          background-size: cover;
+        }
+        .sidenav-div {
+          background-color: rgb(255, 255, 255, 0.5);
+        }
+      </style>
+      <ul class="sidenav" id="mobile-nav">
+        <div class="sidenav-div">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="{% url 'home' %}">API</a></li>
+        </div>
+      </ul>
+      <script>
+        $(document).ready(function () {
+          $('.sidenav').sidenav();
+        });
+      </script>
+
+  <!-- Content -->
+  <div>{% block  content %} {% endblock  %}</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
