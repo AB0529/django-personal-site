@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swa);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+/* Universal */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scroll */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Make strong tag actually bold */
+
+strong {
+    font-weight: bold;
+}
+
+/* Navbar with padding and margin */
+
+nav {
+    padding: 1vh;
+    margin: 1vh;
+}
+
+/* Navbar brand logo, change font and resize */
+
+.brand-logo>strong {
+    font-size: 3vh;
+    color: #F5F5DC;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar items, change font and resize */
+
+.nav-tabs>li>a {
+    color: #F5F5DC;
+    font-size: 2vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar, just do some stuff */
+
+.navbar-fixed {
+    position: absolute;
+    z-index: (99999999999);
+}
+
+/* Sidebar, change background */
+
+.sidenav {
+    background-image: url(https://wallpaperaccess.com/full/655277.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Sidebar, Change background */
+
+.sidenav-div {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+/* Banner, center items */
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Banner, setup image */
+
+.banner img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /* filter: blur(5px); */
+    transform: scale(1.1);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)); */
+}
+
+/* Banner text, keep it center and do some things to it */
+
+.banner-txt {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    color: white;
+    text-shadow: 5px 5px #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Fix Banner border with blur | NO LONGER NEEDED, NOT USING BLUR | */
+
+/* .banner-border::after {
+    content: '';
+    position: absolute;
+    border-top: 10px solid rgb(255, 0, 0, 0.5);
+    left: 45%;
+    bottom: 0;
+    width: 10%;
+    height: 0px;
+} */
+
+/* Wrapper for stuffer beyond banner */
+
+.home-section {
+    background-color: #262a2b;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* About, little line under the main text */
+
+.about-border::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    border-bottom: 5px solid gray;
+}
+
+.aboutme-text {
+    color: lightgray;
+    overflow-wrap: break-word;
+    font-family: 'Ubuntu', sans-serif;
+}

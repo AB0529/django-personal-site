@@ -2,9 +2,9 @@
 <html>
 
 <head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,19 +12,6 @@
 </head>
 
 <body>
-  <style>
-    nav {
-      padding: 1vh;
-      margin: 1vh;
-      font-family:Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .navbar-fixed {
-      position: absolute;
-      z-index: (99999999999);
-    }
-  </style>
-
   <div class="navbar-fixed">
     <!-- Navbar -->
     <nav class="transparent z-depth-0">
@@ -37,7 +24,7 @@
 
         <ul class="right hide-on-med-and-down ">
           <!-- Nav Items -->
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <ul id="nav-mobile" class="right hide-on-med-and-down nav-tabs">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="{% url 'home' %}">API</a></li>
@@ -46,16 +33,6 @@
     </nav>
   </div>
       <!-- Mobile Navbar -->
-      <style>
-        .sidenav {
-          background-image: url(https://wallpaperaccess.com/full/655277.png);
-          background-position: center;
-          background-size: cover;
-        }
-        .sidenav-div {
-          background-color: rgb(255, 255, 255, 0.5);
-        }
-      </style>
       <ul class="sidenav" id="mobile-nav">
         <div class="sidenav-div">
           <li><a href="#about">About</a></li>
