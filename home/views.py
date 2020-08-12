@@ -1,6 +1,7 @@
 from github import Github
 from django.shortcuts import render
 from django.conf import settings
+from datetime import datetime
 
 
 def build_project_html(language, title, desc, link):
@@ -23,5 +24,6 @@ def home(req):
     # Send projects html
     context = {}
     context['projects'] = projects_html
+    context['current_year'] = datetime.now().year
 
     return render(req, 'home.html', context)
