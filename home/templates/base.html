@@ -5,8 +5,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
   {% load static %}
+  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon-32.png' %}" />
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% block title %} <title> Anish B. </title> {% endblock %}
@@ -33,19 +35,19 @@
       </div>
     </nav>
   </div>
-      <!-- Mobile Navbar -->
-      <ul class="sidenav" id="mobile-nav">
-        <div class="sidenav-div">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="{% url 'home' %}">API</a></li>
-        </div>
-      </ul>
-      <script>
-        $(document).ready(function () {
-          $('.sidenav').sidenav();
-        });
-      </script>
+  <!-- Mobile Navbar -->
+  <ul class="sidenav" id="mobile-nav">
+    <div class="sidenav-div">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="{% url 'home' %}">API</a></li>
+    </div>
+  </ul>
+  <script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+    });
+  </script>
 
   <!-- Content -->
   <div>{% block  content %} {% endblock  %}</div>
