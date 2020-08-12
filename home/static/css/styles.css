@@ -104,7 +104,7 @@ nav {
 .banner-border::after {
     content: '';
     position: absolute;
-    border-top: 10px solid rgb(255, 0, 0, 0.5);
+    border-top: 10px solid #c73636;
     left: 45%;
     bottom: 0;
     width: 10%;
