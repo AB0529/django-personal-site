@@ -1,29 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-  {% block navbar %}
-    {% include "navbar.html" %}
-  {% endblock %}
-
+  {% include "navbar.html" %}
   <div class="home-section">
-
-    {% block banner %}
-      {% include "banner.html" %}
-    {% endblock %}
-
-    {% block aboutme %}
-      {% include "aboutme.html" %}
-    {% endblock %}
-
-    {% block projects %}
-      {% include "projects.html" %}
-    {% endblock %}
-
+    {% include "banner.html" %}
+    {% include "aboutme.html" %}
+    {% include "projects.html" %}
   </div>
-
-  {% block footer %}
-    {% include "footer.html" %}
-  {% endblock %}
+  {% include "footer.html" %}
 
 {% endblock content %}
