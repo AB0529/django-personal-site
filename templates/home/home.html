@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% include "home/navbar.html" %}
+  <div class="home-section">
+    {% include "home/banner.html" %}
+    {% include "home/aboutme.html" %}
+    {% include "home/projects.html" %}
+  </div>
+  {% include "home/footer.html" %}
+
+{% endblock content %}

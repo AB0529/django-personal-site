@@ -37,4 +37,4 @@ def home(req):
 
     context['current_year'] = datetime.now().year
 
-    return render(req, 'home.html', context)
+    return render(req, 'home/home.html', context)
