@@ -2,29 +2,29 @@
 <html>
 
 <head>
-  <!-- Load external stylesheet from materialize and icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
-  <!-- Load static files like stylesheet and favicon -->
-  {% load static %}
-  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon-32.png' %}" />
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-  <!-- Load JQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+	<!-- Load external stylesheet from materialize and icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+	<!-- Load static files like stylesheet and favicon -->
+	{% load static %}
+	<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon-32.png' %}" />
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+	<!-- Load JQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-  <!-- Setup meta data -->
-  <meta charset="UTF-8" />
-  <meta name="description" content="Personal website built with Django and Materialize!" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Page title -->
-  {% block title %} <title> Anish B. </title> {% endblock %}
+	<!-- Setup meta data -->
+	<meta charset="UTF-8" />
+	<meta name="description" content="Personal website built with Django and Materialize!" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Page title -->
+	{% block title %} <title> Anish B. </title> {% endblock %}
 </head>
 
 <body>
-  <!-- Content -->
-  <div>{% block  content %} {% endblock  %}</div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!-- Content -->
+	<div>{% block  content %} {% endblock  %}</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
