@@ -9,13 +9,13 @@
             <div class="row">
                 {% for project in projects %}
                 <div class="col s12 m6">
-                    <div class="card small blue-grey darken-2">
+                    <div class="card small blue-grey darken-4">
                         <div class="card-content white-text"> <span class="card-title"> <i
                                     class="devicon-{{ project.lang }}-plain colored"></i> |
                                 <strong>{{ project.title }}</strong></span>
                             <p>{{ project.desc }}</p>
                         </div>
-                        <div class="card-action"> <a href="{{ project.link }}" target="_blank" class="blue-grey darken-4 btn"> <i
+                        <div class="card-action"> <a href="{{ project.link }}" target="_blank" class="blue-grey darken-3 btn"> <i
                                     class="devicon-github-plain colored"></i> <strong>Source</strong></a> </div>
                     </div>
                 </div>

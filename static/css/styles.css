@@ -62,7 +62,8 @@ nav {
 
 .sidenav {
     /* background-image: url(https://wallpaperaccess.com/full/655277.png); */
-    background-color: darkslategray;
+    width: 50%;
+    background-color: rgb(255, 255, 255, 0.3);
     background-position: center;
     background-size: cover;
 }
@@ -70,6 +71,7 @@ nav {
 /* Sidebar, Change background */
 
 .sidenav-div {
+    padding: 2vh;
     background-color: rgb(255, 255, 255, 0.5);
 }
 
@@ -122,7 +124,7 @@ nav {
 /* Wrapper for stuffer beyond banner */
 
 .home-section {
-    background-color: #262a2b;
+    background-color: #1e2122;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
@@ -149,7 +151,7 @@ nav {
 /* Project section, changes color  */
 
 .project-section {
-    background-color: #353a3d;
+    background-color: #272a2c;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
