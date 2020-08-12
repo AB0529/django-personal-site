@@ -32,7 +32,7 @@ nav {
 .brand-logo>strong {
     font-size: 3vh;
     color: #e7dcdc;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 /* Navbar items, change font and resize */
@@ -40,7 +40,7 @@ nav {
 .nav-tabs>li>a {
     color: #e7dcdc;
     font-size: 2vh;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 /* Navbar, just do some stuff */
