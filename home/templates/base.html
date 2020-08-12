@@ -17,40 +17,6 @@
 </head>
 
 <body>
-  <div class="navbar-fixed">
-    <!-- Navbar -->
-    <nav class="transparent z-depth-0">
-      <div class="nav-wrapper">
-        <!-- Logo -->
-        <a class="brand-logo" href="#"><strong>Anish B.</strong></a>
-        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-          <i class="material-icons">menu</i>
-        </a>
-
-        <ul class="right hide-on-med-and-down ">
-          <!-- Nav Items -->
-          <ul id="nav-mobile" class="right hide-on-med-and-down nav-tabs">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="{% url 'api' %}">API</a></li>
-          </ul>
-      </div>
-    </nav>
-  </div>
-  <!-- Mobile Navbar -->
-  <ul class="sidenav" id="mobile-nav">
-    <div class="sidenav-div">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="{% url 'api' %}">API</a></li>
-    </div>
-  </ul>
-  <script>
-    $(document).ready(function () {
-      $('.sidenav').sidenav();
-    });
-  </script>
-
   <!-- Content -->
   <div>{% block  content %} {% endblock  %}</div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

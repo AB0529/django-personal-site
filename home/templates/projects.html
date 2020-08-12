@@ -1,0 +1,16 @@
+{% block projects %}
+<!-- Projects Page -->
+<div class="project-section">
+    <div id="projects" class="center-align" style="padding: 1vh;">
+        <h3> <strong> Projects </strong> </h3>
+        <h1 class="projects-border"></h1>
+        <!-- Projects Grid -->
+        <div class="container">
+            <div class="row">
+                {% for project in projects %}
+                {{ project|safe }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
