@@ -17,7 +17,7 @@ def home(req):
     g = Github(settings.GH_TOKEN)
     # Build all projects into html string
     projects_html = [build_project_html(
-        repo.language, repo.name, 'No description' if not repo.description else repo.description, repo.url
+        repo.language, repo.name, 'No description' if not repo.description else repo.description, f'https://github.com/{repo.full_name}'
     ) for repo in g.get_user().get_repos()]
 
     # Send projects html
