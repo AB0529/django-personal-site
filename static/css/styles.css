@@ -12,7 +12,7 @@
 
 ::selection, ::-moz-selection {
     color: blueviolet;
-    background: white;
+    background: rgb(87, 86, 86);
 }
 
 
