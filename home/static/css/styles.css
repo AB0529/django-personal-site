@@ -31,14 +31,14 @@ nav {
 
 .brand-logo>strong {
     font-size: 3vh;
-    color: #F5F5DC;
+    color: #e7dcdc;
     font-family: 'Montserrat', sans-serif;
 }
 
 /* Navbar items, change font and resize */
 
 .nav-tabs>li>a {
-    color: #F5F5DC;
+    color: #e7dcdc;
     font-size: 2vh;
     font-family: 'Montserrat', sans-serif;
 }
@@ -76,7 +76,7 @@ nav {
 /* Banner, setup image */
 
 .banner img {
-    flex-shrink: 0;
+    flex: 1 0 auto;
     min-width: 100%;
     min-height: 100%;
     /* filter: blur(5px); */
@@ -87,19 +87,20 @@ nav {
 /* Banner text, keep it center and do some things to it */
 
 .banner-txt {
+    flex: 1 0 auto;
     position: absolute;
     left: 0;
     text-align: center;
     top: 40%;
     width: 100%;
     color: white;
-    text-shadow: 5px 5px #333;
+    text-shadow: 3px 3px #333;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Fix Banner border with blur | NO LONGER NEEDED, NOT USING BLUR | */
+/* Little line under banner text */
 
-/* .banner-border::after {
+.banner-border::after {
     content: '';
     position: absolute;
     border-top: 10px solid rgb(255, 0, 0, 0.5);
@@ -107,7 +108,7 @@ nav {
     bottom: 0;
     width: 10%;
     height: 0px;
-} */
+}
 
 /* Wrapper for stuffer beyond banner */
 
@@ -124,11 +125,29 @@ nav {
     display: block;
     margin: 0 auto;
     width: 30%;
-    border-bottom: 5px solid gray;
+    border-bottom: 5px solid purple;
 }
+
+/* The about me text */
 
 .aboutme-text {
     color: lightgray;
     overflow-wrap: break-word;
     font-family: 'Ubuntu', sans-serif;
+}
+/* Project section, changes color  */
+.project-section {
+    background-color: #353a3d;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Little line under projects */
+
+.projects-border::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    border-bottom: 5px solid rgb(173, 20, 46);
 }

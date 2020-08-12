@@ -6,20 +6,35 @@
     <div class="banner">
         <img class="banner" src="https://wallpaperaccess.com/full/655277.png" />
         <!-- Banner Text -->
-        <div class="banner-txt">
-            <h1>ANISH B.</h1>
+        <div class="banner-txt glitch">
+            <h1> <strong>ANISH B.</strong> </h1>
             <h1 class="banner-border"></h1>
         </div>
     </div>
     <!-- About Page -->
     <div id="about" class="center-align" style="padding: 1vh;">
-        <h3>About Me</h3>
+        <h3> <strong> About Me </strong> </h3>
         <h1 class="about-border"></h1>
         <p class="aboutme-text">
             Hello!<br>
             TODO: Become interesting enough to write an About Me.
-            
         </p>
+    </div>
+</div>
+
+<!-- Projects Page -->
+<div class="project-section">
+    <div id="projects" class="center-align" style="padding: 1vh;">
+        <h3> <strong> Projects </strong> </h3>
+        <h1 class="projects-border"></h1>
+        <!-- Projects Grid -->
+        <div class="container">
+            <div class="row">
+                {% for project in projects %}
+                    {{ project|safe }}
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
