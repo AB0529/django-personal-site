@@ -53,7 +53,8 @@ nav {
 /* Sidebar, change background */
 
 .sidenav {
-    background-image: url(https://wallpaperaccess.com/full/655277.png);
+    /* background-image: url(https://wallpaperaccess.com/full/655277.png); */
+    background-color: darkslategray;
     background-position: center;
     background-size: cover;
 }
