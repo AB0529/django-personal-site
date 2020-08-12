@@ -9,7 +9,7 @@ def build_project_html(language, title, desc, link):
     if not language:
         language = "atom"
 
-    return f'<div class="col s12 m6"> <div class="card blue-grey darken-2"> <div class="card-content white-text"> <span class="card-title"> <i class="devicon-{language.lower()}-plain colored"></i> | <strong>{title}</strong></span> <p>{desc}</p></div><div class="card-action"> <a href="{link}" target="_blank" class="blue-grey darken-4 btn"> <i class="devicon-github-plain colored"></i> <strong>Source</strong></a> </div></div></div>'
+    return f'<div class="col s12 m6"> <div class="card small blue-grey darken-2"> <div class="card-content white-text"> <span class="card-title"> <i class="devicon-{language.lower()}-plain colored"></i> | <strong>{title}</strong></span> <p>{desc}</p></div><div class="card-action"> <a href="{link}" target="_blank" class="blue-grey darken-4 btn"> <i class="devicon-github-plain colored"></i> <strong>Source</strong></a> </div></div></div>'
 
 
 def home(req):
