@@ -10,7 +10,7 @@ This is the home page of the site with two sections:
 
 - About : a simple about me section
 
-- Projects : list of projects
+- Projects : list of projects, updates from GitHub repo
 
 ### API
 
