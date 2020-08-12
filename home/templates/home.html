@@ -2,78 +2,78 @@
 
 {% block content %}
 <div class="home-section">
-    <!-- Banner -->
-    <div class="banner">
-        <img class="banner" alt="banner-img" src="https://wallpaperaccess.com/full/655277.png" />
-        <!-- Banner Text -->
-        <div class="banner-txt">
-            <h1> <strong>ANISH B.</strong> </h1>
-            <h1 class="banner-border"></h1>
-        </div>
+  <!-- Banner -->
+  <div class="banner">
+    <img class="banner" alt="banner-img" src="https://wallpaperaccess.com/full/655277.png" />
+    <!-- Banner Text -->
+    <div class="banner-txt">
+      <h1> <strong>ANISH B.</strong> </h1>
+      <h1 class="banner-border"></h1>
     </div>
-    <!-- About Page -->
-    <div id="about" class="center-align" style="padding: 1vh;">
-        <h3> <strong> About Me </strong> </h3>
-        <h1 class="about-border"></h1>
-        <p class="aboutme-text">
-            Hello!<br>
-            I am a <strong>full stack web developer</strong> who's hobbies include: playing video games, and programming.<br>
-            I have many skills that I've aquired over the past years, some of them include:<br>
-            <ul style="font-family: 'Ubuntu', sans-serif">
-              <li>
-                <strong>
-                  <a>JavaScript,</a>
-                  <a>TypeScript</a>
-                  <a>Python,</a>
-                  <a>Database creation and managment,</a>
-                  <a>Server Managment,</a><br>
-                  <a>C/C++,</a>
-                  <a>Golang,</a><br>
-                </strong>
-              </li>
-              and many others I've decided not to include here.<br>
-            </ul>
-        </p>
-    </div>
+  </div>
+  <!-- About Page -->
+  <div id="about" class="center-align" style="padding: 1vh;">
+    <h3> <strong> About Me </strong> </h3>
+    <h1 class="about-border"></h1>
+    <p class="aboutme-text">
+      Hello!<br>
+      I am a <strong>full stack web developer</strong> who's hobbies include: playing video games, and programming.<br>
+      I have many skills that I've aquired over the past years, some of them include:<br>
+    <ul style="font-family: 'Ubuntu', sans-serif">
+      <li>
+        <strong>
+          <a>JavaScript,</a>
+          <a>TypeScript</a>
+          <a>Python,</a>
+          <a>Database creation and managment,</a>
+          <a>Server Managment,</a><br>
+          <a>C/C++,</a>
+          <a>Golang,</a><br>
+        </strong>
+      </li>
+      and many others I've decided not to include here.<br><br><br>
+    </ul>
+    </p>
+  </div>
 </div>
 
 <!-- Projects Page -->
 <div class="project-section">
-    <div id="projects" class="center-align" style="padding: 1vh;">
-        <h3> <strong> Projects </strong> </h3>
-        <h1 class="projects-border"></h1>
-        <!-- Projects Grid -->
-        <div class="container">
-            <div class="row">
-                {% for project in projects %}
-                    {{ project|safe }}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer -->
-
-<footer class="page-footer grey darken-4" id="footer">
+  <div id="projects" class="center-align" style="padding: 1vh;">
+    <h3> <strong> Projects </strong> </h3>
+    <h1 class="projects-border"></h1>
+    <!-- Projects Grid -->
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Contact</h5>
-          <a class="grey-text text-lighten-4" href="#footer">anishb0529@gmail.com</a>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="https://github.com/AB0529" target="_blank">GitHub</a></li>
-          </ul>
-        </div>
+        {% for project in projects %}
+        {{ project|safe }}
+        {% endfor %}
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer grey darken-4" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Contact</h5>
+        <a class="grey-text text-lighten-4" href="#footer">anishb0529@gmail.com</a>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://github.com/AB0529" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
       © {{ current_year }} All Rights Reserved
       <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
-      </div>
     </div>
-  </footer>
+  </div>
+</footer>
 {% endblock %}
