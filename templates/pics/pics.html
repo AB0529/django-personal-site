@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-	{% incldue "pics/images.html" %}
+	{% include "pics/images.html" %}
 {% else %}
 <p>You are not logged in</p>
 <a href="{% url 'login' %}">login</a>
