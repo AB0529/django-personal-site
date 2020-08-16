@@ -164,3 +164,27 @@ strong {
 	width: 30%;
 	border-bottom: 5px solid rgb(173, 20, 46);
 }
+
+/* Pics */
+
+.pics-container {
+	display: table;
+	background-color: #272a2c;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.pics-content {
+	display: table-row;
+	height: 100%;
+}
+
+.pics-content-body {
+	display: table-cell;
+}
+
+.center {
+	margin: auto;
+	width: 50%;
+}

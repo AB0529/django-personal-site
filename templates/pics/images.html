@@ -1,0 +1,26 @@
+{% block images %}
+<div class="row">
+	<!-- Pic list -->
+	{% for ss in screenshots %}
+	<div class="col s12 m6">
+		<div class="card medium blue-grey darken-4">
+			<div class="card-image">
+				<img class="responsive-img materialboxed" src="data:image/png;base64,{{ ss.img }}" width="512"
+					height="512" />
+			</div>
+			<div class="card-content white-text"> <span class="card-title">
+					<strong>{{ ss.name }}</strong></span>
+				<p style="font-size: 20px;">{{ ss.date }}</p>
+			</div>
+			<div class="card-action"> <a class="blue-grey darken-3 btn"> <strong>Delete</strong></a> </div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('.materialboxed').materialbox();
+	});
+</script>
+{% endblock %}

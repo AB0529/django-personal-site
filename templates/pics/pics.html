@@ -2,6 +2,52 @@
 
 {% block content %}
 
-<h1>Hi</h1>
+{% if user.is_authenticated %}
+	<div>
+		<!-- Navbar -->
+		<nav class="blue-grey z-depth-0">
+			<div class="nav-wrapper">
+				<!-- Logo -->
+				<a class="brand-logo left" href="#"><strong>Pics</strong></a>
+				<a href="#" class="sidenav-trigger" data-target="mobile-nav">
+					<i class="material-icons">menu</i>
+				</a>
+
+				<ul class="right hide-on-med-and-down ">
+					<!-- Nav Items -->
+					<ul id="nav-mobile" class="right hide-on-med-and-down nav-tabs">
+						<li><a href="{% url 'logout'  %}">Logout</a></li>
+						<!-- {% comment %}  <li><a href="{% url 'home' %}">API</a></li>  {% endcomment %} -->
+					</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- Mobile Navbar -->
+	<ul class="sidenav" id="mobile-nav">
+		<div class="sidenav-div">
+			<li><a href="{% url 'logout'  %}">Logout</a></li>
+			<!-- {% comment %}  <li><a href="{% url 'home' %}">API</a></li>  {% endcomment %} -->
+		</div>
+	</ul>
+	<script>
+		$(document).ready(function () {
+			$('.sidenav').sidenav();
+		});
+	</script>
+
+
+	<div class="pics-container">
+
+		<div class="pics-content">
+			<div class="pics-content-body center">
+				{% include "pics/images.html" %}
+			</div>
+		</div>
+
+	</div>
+{% else %}
+	<p>You are not logged in</p>
+	<a href="{% url 'login' %}">login</a>
+{% endif %}
 
 {% endblock %}
