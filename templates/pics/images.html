@@ -1,26 +1,37 @@
 {% block images %}
-<div class="row">
-	<!-- Pic list -->
-	{% for ss in screenshots %}
-	<div class="col s12 m6">
-		<div class="card medium blue-grey darken-4">
-			<div class="card-image">
-				<img class="responsive-img materialboxed" src="data:image/png;base64,{{ ss.img }}" width="512"
-					height="512" />
+<div class="pics-section">
+	<a class="waves-effect waves-light white-text green btn right" href="{% url 'logout' %}"><i class="material-icons left">exit_to_app</i><strong>Logout</strong></a>
+	<div class="center-align" style="padding: 1vh;">
+		<h3> <strong> Screenshots </strong> </h3>
+		<h1 class="pics-border"></h1>
+		<!-- Cards Grid -->
+		<div class="container">
+			<div class="row" id="screenshots">
+				{% for ss in screenshots %}
+				<form action="">
+					<div class="col s12 m6">
+						<span class="card-title" style="font-size: 3vh; color: rgb(14, 161, 75)"><strong>{{ ss.name }}</strong></span>
+						<div class="card small blue-grey darken-4">
+							<div class="card-image">
+								<img class="materialboxed" src="data:image/png;base64,{{ ss.img }}" />
+							</div>
+							<div class="card-content white-text">
+								<p style="font-size: 2vh;">{{ ss.date }}</p>
+							</div>
+							<div class="card-action"> <a href="{% url 'delete_screenshot' name=ss.name %}" target="#" class="blue-grey darken-3 btn"> <strong>❌
+										Delete</strong></a> </div>
+						</div>
+					</div>
+				</form>
+				{% endfor %}
 			</div>
-			<div class="card-content white-text"> <span class="card-title">
-					<strong>{{ ss.name }}</strong></span>
-				<p style="font-size: 20px;">{{ ss.date }}</p>
-			</div>
-			<div class="card-action"> <a class="blue-grey darken-3 btn"> <strong>Delete</strong></a> </div>
 		</div>
-	</div>
-	{% endfor %}
 
-	<script>
-		$(document).ready(function () {
-			$('.materialboxed').materialbox();
-		});
-	</script>
+		<script>
+			$(document).ready(function () {
+				$('.materialboxed').materialbox();
+			});
+		</script>
+	</div>
 </div>
 {% endblock %}
