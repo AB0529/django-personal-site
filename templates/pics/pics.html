@@ -3,51 +3,45 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-	<div>
-		<!-- Navbar -->
-		<nav class="blue-grey z-depth-0">
-			<div class="nav-wrapper">
-				<!-- Logo -->
-				<a class="brand-logo left" href="#"><strong>Pics</strong></a>
-				<a href="#" class="sidenav-trigger" data-target="mobile-nav">
-					<i class="material-icons">menu</i>
-				</a>
-
-				<ul class="right hide-on-med-and-down ">
-					<!-- Nav Items -->
-					<ul id="nav-mobile" class="right hide-on-med-and-down nav-tabs">
-						<li><a href="{% url 'logout'  %}">Logout</a></li>
-						<!-- {% comment %}  <li><a href="{% url 'home' %}">API</a></li>  {% endcomment %} -->
-					</ul>
-			</div>
-		</nav>
-	</div>
-	<!-- Mobile Navbar -->
-	<ul class="sidenav" id="mobile-nav">
-		<div class="sidenav-div">
-			<li><a href="{% url 'logout'  %}">Logout</a></li>
-			<!-- {% comment %}  <li><a href="{% url 'home' %}">API</a></li>  {% endcomment %} -->
-		</div>
-	</ul>
-	<script>
-		$(document).ready(function () {
-			$('.sidenav').sidenav();
-		});
-	</script>
-
-
-	<div class="pics-container">
-
-		<div class="pics-content">
-			<div class="pics-content-body center">
-				{% include "pics/images.html" %}
+<div class="pics-section">
+	<a class="waves-effect waves-light white-text green btn right" href="{% url 'logout' %}"><i class="material-icons left">exit_to_app</i><strong>Logout</strong></a>
+	<div class="center-align" style="padding: 1vh;">
+		<h3> <strong> Screenshots </strong> </h3>
+		<h1 class="pics-border"></h1>
+		<!-- Cards Grid -->
+		<div class="container">
+			<div class="row" id="screenshots">
+				{% for ss in screenshots %}
+				<form action="">
+					<div class="col s12 m6">
+						<span class="card-title" style="font-size: 3vh; color: rgb(14, 161, 75)"><strong>{{ ss.name }}</strong></span>
+						<div class="card small blue-grey darken-4">
+							<div class="card-image">
+								<img class="materialboxed" src="data:image/png;base64,{{ ss.img }}" />
+							</div>
+							<div class="card-content white-text">
+								<p style="font-size: 2vh;">{{ ss.date }}</p>
+							</div>
+							<div class="card-action"> <a href="{% url 'delete_screenshot' name=ss.name %}" target="#" class="blue-grey darken-3 btn"> <strong>❌
+										Delete</strong></a> </div>
+						</div>
+					</div>
+				</form>
+				{% endfor %}
 			</div>
 		</div>
 
+		<script>
+			$(document).ready(function () {
+				$('.materialboxed').materialbox();
+			});
+		</script>
 	</div>
+</div>
+
 {% else %}
-	<p>You are not logged in</p>
-	<a href="{% url 'login' %}">login</a>
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">login</a>
 {% endif %}
 
 {% endblock %}

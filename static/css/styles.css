@@ -167,24 +167,17 @@ strong {
 
 /* Pics */
 
-.pics-container {
-	display: table;
+.pics-section {
 	background-color: #272a2c;
-	position: absolute;
-	height: 100%;
-	width: 100%;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
 }
 
-.pics-content {
-	display: table-row;
-	height: 100%;
-}
 
-.pics-content-body {
-	display: table-cell;
-}
-
-.center {
-	margin: auto;
-	width: 50%;
+.pics-border::after {
+	content: '';
+	display: block;
+	margin: 0 auto;
+	width: 30%;
+	border-bottom: 5px solid rgb(14, 161, 75);
 }
