@@ -8,13 +8,13 @@ from django.shortcuts import render
 
 def get_screenshots():
 	''' Will get all screenshots in database from API '''
-	r = requests.get(f'https://api.anishb.net/screenshots/all/{settings.API_KEY}')
+	r = requests.get(f'{settings.API_HOST}/all/{settings.API_KEY}')
 
 	return r.json()["result"]
 
 @login_required
 def delete_screenshot(req, name):
-	r = requests.delete(f'https://api.anishb.net/screenshots/{settings.API_KEY}/{name}')
+	r = requests.delete(f'{settings.API_HOST}/{settings.API_KEY}/{name}')
 	r = r.json()
 
 	if r["state"] == "fail":
