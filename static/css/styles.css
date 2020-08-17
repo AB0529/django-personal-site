@@ -1,183 +1,235 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100);
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swa);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
 /* Universal */
 
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 
 /* Change selection color */
 
-::selection, ::-moz-selection {
-	color: blueviolet;
-	background: rgb(87, 86, 86);
+::selection,
+ ::-moz-selection {
+    color: blueviolet;
+    background: rgb(87, 86, 86);
 }
+
 
 /* Smooth scroll */
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 
 /* Make strong tag actually bold */
 
 strong {
-	font-weight: bold;
+    font-weight: bold;
 }
+
 
 /* Navbar with padding and margin */
 
 .nav-pad {
-	padding: 1vh;
-	margin: 1vh;
+    padding: 1vh;
+    margin: 1vh;
 }
+
 
 /* Navbar brand logo, change font and resize */
 
 .brand-logo>strong {
-	font-size: 3vh;
-	color: #e7dcdc;
-	font-family: 'Ubuntu', sans-serif;
+    font-size: 3vh;
+    color: #e7dcdc;
+    font-family: 'Ubuntu', sans-serif;
 }
+
 
 /* Navbar items, change font and resize */
 
 .nav-tabs>li>a {
-	color: #e7dcdc;
-	font-size: 2vh;
-	font-family: 'Ubuntu', sans-serif;
+    color: #e7dcdc;
+    font-size: 2vh;
+    font-family: 'Ubuntu', sans-serif;
 }
+
 
 /* Navbar, just do some stuff */
 
 .navbar-fixed {
-	position: absolute;
-	z-index: (99999999999);
+    position: absolute;
+    z-index: (99999999999);
 }
+
 
 /* Sidebar, change background */
 
 .sidenav {
-	/* background-image: url(https://wallpaperaccess.com/full/655277.png); */
-	width: 50%;
-	background-color: rgb(255, 255, 255, 0.3);
-	background-position: center;
-	background-size: cover;
+    /* background-image: url(https://wallpaperaccess.com/full/655277.png); */
+    width: 50%;
+    background-color: rgb(255, 255, 255, 0.3);
+    background-position: center;
+    background-size: cover;
 }
+
 
 /* Sidebar, Change background */
 
 .sidenav-div {
-	padding: 2vh;
-	background-color: rgb(255, 255, 255, 0.5);
+    padding: 2vh;
+    background-color: rgb(255, 255, 255, 0.5);
 }
+
 
 /* Banner, center items */
 
 .banner {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
+
 
 /* Banner, setup image */
 
 .banner img {
-	flex: 1 0 auto;
-	min-width: 100%;
-	min-height: 100%;
-	filter: blur(5px);
-	transform: scale(1.1);
-	/* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)); */
+    flex: 1 0 auto;
+    min-width: 100%;
+    min-height: 100%;
+    filter: blur(5px);
+    transform: scale(1.1);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)); */
 }
+
 
 /* Banner text, keep it center and do some things to it */
 
 .banner-txt {
-	flex: 1 0 auto;
-	position: absolute;
-	left: 0;
-	text-align: center;
-	top: 40%;
-	width: 100%;
-	color: white;
-	text-shadow: 3px 3px #333;
-	font-family: 'Montserrat', sans-serif;
+    flex: 1 0 auto;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    color: white;
+    text-shadow: 3px 3px #333;
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 /* Little line under banner text */
 
 .banner-border::after {
-	content: '';
-	position: absolute;
-	border-top: 10px solid #c73636;
-	left: 45%;
-	bottom: 0;
-	width: 10%;
-	height: 0px;
+    content: '';
+    position: absolute;
+    border-top: 10px solid #c73636;
+    left: 45%;
+    bottom: 0;
+    width: 10%;
+    height: 0px;
 }
+
 
 /* Wrapper for stuffer beyond banner */
 
 .home-section {
-	background-color: #1e2122;
-	color: white;
-	font-family: 'Montserrat', sans-serif;
+    background-color: #1e2122;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 /* About, little line under the main text */
 
 .about-border::after {
-	content: '';
-	display: block;
-	margin: 0 auto;
-	width: 30%;
-	border-bottom: 5px solid purple;
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    border-bottom: 5px solid purple;
 }
+
 
 /* The about me text */
 
 .aboutme-text {
-	color: lightgray;
-	overflow-wrap: break-word;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 2vh;
+    color: lightgray;
+    overflow-wrap: break-word;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2vh;
 }
+
 
 /* Project section, changes color  */
 
 .project-section {
-	background-color: #272a2c;
-	color: white;
-	font-family: 'Montserrat', sans-serif;
+    background-color: #272a2c;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 /* Little line under projects */
 
 .projects-border::after {
-	content: '';
-	display: block;
-	margin: 0 auto;
-	width: 30%;
-	border-bottom: 5px solid rgb(173, 20, 46);
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    border-bottom: 5px solid rgb(173, 20, 46);
 }
+
 
 /* Pics */
 
 .pics-section {
-	background-color: #272a2c !important;
-	color: white;
-	font-family: 'Montserrat', sans-serif;
+    background-color: #272a2c !important;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pics-border::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    border-bottom: 5px solid rgb(14, 161, 75);
 }
 
 
-.pics-border::after {
-	content: '';
-	display: block;
-	margin: 0 auto;
-	width: 30%;
-	border-bottom: 5px solid rgb(14, 161, 75);
+/* Login page */
+
+#login-background {
+    flex: 1 0 auto;
+    min-width: 100%;
+    min-height: 100%;
+    filter: blur(5px);
+    transform: scale(1.1);
+    background-image: url('/static/img/login-bg.jpg');
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.login-card {
+    color: rgb(204, 197, 197);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }

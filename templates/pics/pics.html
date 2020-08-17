@@ -2,27 +2,7 @@
 
 {% block content %}
 
-
-
 {% if user.is_authenticated %}
-	<style>
-		/* Pics */
-	
-		.pics-section {
-			background-color: #272a2c;
-			color: white;
-			font-family: 'Montserrat', sans-serif;
-		}
-	
-	
-		.pics-border::after {
-			content: '';
-			display: block;
-			margin: 0 auto;
-			width: 30%;
-			border-bottom: 5px solid rgb(14, 161, 75);
-		}
-	</style>
 <div class="pics-section">
 	<a class="waves-effect waves-light white-text green btn right" href="{% url 'logout' %}"><i
 			class="material-icons left">exit_to_app</i><strong>Logout</strong></a>
