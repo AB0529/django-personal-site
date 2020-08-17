@@ -1,39 +1,41 @@
 {% block navbar %}
 
 <div class="navbar-fixed">
-	<!-- Navbar -->
-	<nav class="transparent z-depth-0 nav-pad">
-		<div class="nav-wrapper">
-			<!-- Logo -->
-			<a class="brand-logo" href="#"><strong>Anish B.</strong></a>
-			<a href="#" class="sidenav-trigger" data-target="mobile-nav">
-				<i class="material-icons">menu</i>
-			</a>
+    <!-- Navbar -->
+    <nav class="transparent z-depth-0 nav-pad">
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <a class="brand-logo" href="#"><strong>Anish B.</strong></a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                <i class="material-icons">menu</i>
+            </a>
 
-			<ul class="right hide-on-med-and-down ">
-				<!-- Nav Items -->
-				<ul id="nav-mobile" class="right hide-on-med-and-down nav-tabs">
-					<li><a href="#about">About</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#footer">Contact</a></li>
-					<!-- {% comment %}  <li><a href="{% url 'home' %}">API</a></li>  {% endcomment %} -->
-				</ul>
-		</div>
-	</nav>
+            <ul class="right hide-on-med-and-down ">
+                <!-- Nav Items -->
+                <ul id="nav-mobile" class="right hide-on-med-and-down nav-tabs">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="https://api.anishb.net">API</a></li>
+                    <!-- {% comment %}  <li><a href="{% url 'home' %}">API</a></li>  {% endcomment %} -->
+                </ul>
+        </div>
+    </nav>
 </div>
 <!-- Mobile Navbar -->
 <ul class="sidenav" id="mobile-nav">
-	<div class="sidenav-div">
-		<li><a href="#about">About</a></li>
-		<li><a href="#projects">Projects</a></li>
-		<li><a href="#footer">Contact</a></li>
-		<!-- {% comment %}  <li><a href="{% url 'home' %}">API</a></li>  {% endcomment %} -->
-	</div>
+    <div class="sidenav-div">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#footer">Contact</a></li>
+        <li><a href="https://api.anishb.net">API</a></li>
+        <!-- {% comment %}  <li><a href="{% url 'home' %}">API</a></li>  {% endcomment %} -->
+    </div>
 </ul>
 <script>
-	$(document).ready(function () {
-		$('.sidenav').sidenav();
-	});
+    $(document).ready(function() {
+        $('.sidenav').sidenav();
+    });
 </script>
 
 {% endblock %}
