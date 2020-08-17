@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http.response import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def get_screenshots():
@@ -12,15 +12,17 @@ def get_screenshots():
 
 	return r.json()["result"]
 
+
 @login_required
-def delete_screenshot(req, name):
+def delete_screenshot(req):
+	name = req.GET.get('name')
 	r = requests.delete(f'{settings.API_HOST}/{settings.API_KEY}/{name}')
 	r = r.json()
 
 	if r["state"] == "fail":
-		return HttpResponseRedirect('/')
+		return HttpResponse()
 
-	return HttpResponseRedirect(req.META.get('HTTP_REFERER'))
+	return HttpResponse()
 
 @login_required
 def home(req):
