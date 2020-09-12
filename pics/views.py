@@ -35,5 +35,4 @@ def home(req):
 		"date": ss["timestamp"]
 	} for ss in get_screenshots()]
 
-
 	return render(req, "pics/pics.html", context)
