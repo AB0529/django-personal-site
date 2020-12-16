@@ -1,6 +1,7 @@
 # Personal Site
 
 A personal site built using Django and Materialize.
+Currently deployed at (anishb.net)[https://anishb.net]
 
 ## Pages
 
