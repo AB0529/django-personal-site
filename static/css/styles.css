@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100);
-@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swa);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@100&display=swa);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 /* Universal */
@@ -56,6 +56,7 @@ strong {
     color: #e7dcdc;
     font-size: 2vh;
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
 }
 
 
@@ -160,9 +161,9 @@ strong {
 
 .aboutme-text {
     color: lightgray;
-    overflow-wrap: break-word;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 2vh;
+    overflow-wrap: break-word;
+    /* font-size: vh; */
 }
 
 
